@@ -7,9 +7,11 @@ def draw_plot():
     # Read data from file
     df=pd.read_csv("epa-sea-level.csv")
 
-    # Create scatter plot
+    # Binding data for variable/ax (x,y)
     x = df['Year']
     y = df['CSIRO Adjusted Sea Level']
+    
+    # Create fig & ax for draw plot
     fig, ax = plt.subplots()
     plt.scatter(x, y)
     
